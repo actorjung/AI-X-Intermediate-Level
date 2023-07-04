@@ -1,0 +1,193 @@
+body{
+    background: url('/static/single_pages/images/pacman3d2.jpg') no-repeat center center fixed;
+    /*background: url('/static/single_pages/images/wallpapaerbetter.jpg') no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /*background-repeat: no-repeat;*/
+}
+
+section{
+    margin-bottom: 150px;
+}
+
+.find-btn{
+   text-align: center;
+}
+
+
+button {
+    margin: 20px;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    top: 460px;
+}
+.w-btn-outline:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.w-btn-outline:active {
+    transform: scale(1.5);
+}
+
+
+.w-btn-blue-outline {
+    border: 3px solid #FFA500;
+    color: #d4dfe6;
+}
+.w-btn-blue-outline:hover {
+    background-color: #FFA500;
+    color: #d4dfe6;
+}
+
+.w-btn-yellow-outline {
+    border: 3px solid #1BEDC6;
+    color: #1BEDC6;
+}
+.w-btn-yellow-outline:hover {
+    background-color: #1BEDC6;
+    color: #1BEDC6;
+}
+
+
+
+
+
+
+
+:root {
+  --line-fill: #3498db;
+  --line-empty: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container-2 {
+  text-align: center;
+}
+.line_container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Added alignment */
+  position: relative;
+  margin-bottom: 10px; /* Adjusted margin */
+  min-width: 350px; /* Adjusted min-width */
+  max-width: 400px; /* Added max-width for centering */
+  margin-left: auto; /* Added margin for centering */
+  margin-right: auto; /* Added margin for centering */
+}
+
+.progress-container::before {
+  content: '';
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+  border-style: dashed;
+  border-width: 6px;
+  border-spacing: 70px; /* Adjusted spacing */
+}
+
+
+
+
+.circle {
+  background-color: #fce205;
+  color: #999;
+  border-radius: 50%;
+  height: 55px; /* Adjusted height */
+  width: 55px; /* Adjusted width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--line-empty);
+  transition: 0.4s ease;
+}
+
+
+
+.circle.active {
+  border-color: #FFDC46;
+}
+
+
+.btn {
+  background-color: #FFA500;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 6px 25px; /* Adjusted padding */
+  margin: 4px; /* Adjusted margin */
+  font-size: 13px; /* Adjusted font-size */
+}
+
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-empty);
+  cursor: not-allowed;
+}
+
+.gif-container {
+    position: fixed;
+      top: 77.5%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+        bottom: 10px;
+        right: 10px;
+        max-width: 800px;
+        z-index: 9999;
+
+  pointer-events: none; /* 이벤트 허용 */
+}

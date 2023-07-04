@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>메인페이지</title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}?after" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/main.css' %}?after" media="screen">
+
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+{% include 'blog/navbar.html' %}
+
+<!--<nav>-->
+<!--    <a href="/blog">Blog</a>-->
+<!--</nav>-->
+
+<div class="find-btn">
+    <a href="/blog" class="w-btn-outline w-btn-blue-outline" type="button" style="top:445px; color:Gainsboro;">Join the '바글바글'</a>
+</div>
+
+<section>
+    <div class="container">
+        <div class="text-light">
+            <h1 style="text-align: center; font-size:50px; font-weight: BOLD;" >바글바글</h1>
+            <p style="text-align: center;font-size: 30px;"> : 바르게 글쓰고 바르게 글읽기 </p></br>
+            <div class="container-2">
+                <p id="text" style="  font-size: 15px text-decoration: underline;"></p>
+
+                <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div style="font-weight: BOLD; color:black;" class="circle active">단계:</div>
+                    <div style="font-weight: BOLD; color:black;" class="circle">1</div>
+                    <div style="font-weight: BOLD; color:black;" class="circle">2</div>
+                    <div style="font-weight: BOLD; color:black;" class="circle">3</div>
+                </div><br>
+<!--                <p id="text" style="  font-size: 15px text-decoration: underline;"></p>-->
+<!--                <p style="font-size: 15px;">이 선수는 진짜 XX(욕)야. 왜 이렇게 못하냐? </p>-->
+<!--                <p id="text" style="  font-size: 15px text-decoration: underline;"></p>-->
+                <p id="text2" style="font-weight: bold;font-size: 16px text-decoration: underline font-size: 16px;"></p>
+                <button class="btn" id="prev" disabled><</button>
+                <button class="btn" id="next">></button>
+            </div>
+<!--            <p style="font-size: 15px;"> 예시: 금연구역인데 그만 펴라 XX(욕) </p>-->
+
+
+        </div>
+    </div>
+</section>
+
+<div class="fixed-bottom">
+<!--    여기 삭제함-->
+</div>
+
+<!--<script src="/single_pages/static/single_pages/css/main.js" type="text/javascript"></script>-->
+<script src="{% static 'single_pages/css/main.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!--{% for post in recent_posts %}-->
+<!--    <div class="bg4">-->
+<!--        <h4><a href="{{ post.get_absolute_url }}">-->
+<!--        {{ post.title }} by {{ post.author }}</a></h4>-->
+<!--        <p>{{ post.content | truncatewords:30 | safe }}</p>-->
+<!--    </div>-->
+
+
+<!--{% endfor %}-->
+</body>
+</html>

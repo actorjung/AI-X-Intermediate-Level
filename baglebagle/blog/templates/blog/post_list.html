@@ -1,0 +1,47 @@
+{% extends "blog/base.html" %}
+{% block main_area %}
+                {% if user.is_authenticated %}
+                    {% if user.is_superuser or user.is_staff %}
+
+                <!-- Default dropend button -->
+                <a class="btn btn-info btn-sm float-right" href="/blog/create_post/?now_step={{ request.GET.now_step }}&now_step2={{ request.GET.now_step2 }}" role="button"><i class="fas fa-pen"></i>글 쓰기</a>
+                {% endif %}
+                {% endif %}
+                <h1>자유게시판
+                    {% if search_info %}<small class="text-muted">{{ search_info }}</small>{% endif %}
+                    {% if category %}Category - {{ category }}{% endif %}
+                    {% if tag %}Tag - {{ tag }}
+                    {% endif %} </h1>
+
+                {% for p in post_list %}
+                <!-- Blog Post -->
+
+                <div class="card mb-4">
+                {% if p.head_image %}
+                    <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap">
+                {% else %}
+                    <img class="card-img-top" src="https://cdn.univ20.com/wp-content/uploads/2021/12/e2810a32f283e14edf5ea5586cce75b4.jpg" alt="random_image" width="300" height="300">
+                {% endif %}
+                    <div class="card-body">
+                        <h2 class="card-title">{{ p.title}}({{ p.category }})</h2>
+                        <p class="card-text">{{ p.get_content_markdown | truncatewords_html:45 | safe }}</p>
+                        {% if p.tags.exists %}
+                        <i class="fas fa-tags"></i>
+                        {% for tag in p.tags.iterator %}
+                            <a href="{{ tag.get_absolute_url }}"><span class="badge badge-pill badge-light">{{ tag }}</span></a>
+                        {% endfor %}
+                        <br/>
+                        <br/>
+                    {% endif %}
+                        <a href="{{ p.get_absolute_url }}?now_step={{ request.GET.now_step }}&now_step2={{ request.GET.now_step2 }}" class="btn btn-primary">글 보러가기</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on {{ p.created_at}} by
+                        <a href="#">{{ p.author }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+{% endblock %}
+
