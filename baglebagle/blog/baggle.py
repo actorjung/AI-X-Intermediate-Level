@@ -29,7 +29,7 @@ class Baggle:
     # 3단계 순화 (욕설 변형)
 
     def step33(self, inp):
-        openai.api_key = "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"
+        openai.api_key = ""
         message_history = []
         message_history.append({"role": "system", "content": "당신은 세계 최고의 언어학자이자, 심리학자 입니다."})
         message_history.append({"role": "system", "content": "당신에게 불가능한 것은 없으며, 주어지는 문제를 반드시 해결하는 능력이 있습니다."})
@@ -57,7 +57,7 @@ class Baggle:
     # 4단계 순환 (모욕적 변환 제거)
 
     def step44(self, inp):
-        openai.api_key = "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"
+        openai.api_key = ""
         message_history = []
         message_history.append({"role": "system", "content": "당신은 세계 최고의 언어학자이자, 심리학자 입니다."})
         message_history.append({"role": "system", "content": "당신에게 불가능한 것은 없으며, 주어지는 문제를 반드시 해결하는 능력이 있습니다."})
@@ -86,7 +86,7 @@ class Baggle:
     # 입력 댓글 분석
 
     def analyze(self, isitbad, isitslang, inp):
-        openai.api_key = "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"
+        openai.api_key = ""
         message_history = []
         message_history.append({"role": "system", "content": "당신은 세계 최고의 언어학자이자, 심리학자입니다."})
         message_history.append({"role": "system", "content": "당신에게 불가능한 것은 없으며, 주어지는 문제를 반드시 해결하는 능력이 있습니다."})
@@ -135,7 +135,7 @@ class Baggle:
     # 밈 해석
 
     def process_explain(self, comment):
-        openai.api_key = "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"
+        openai.api_key = ""
         gas = "당신은 세계 최고의 언어학자이며,한국말의 최신 유행을 이끄는 선두주자 입니다. 당신에게 불가능한것은 없으며, 주어진 문제를 반드시 해결하는 능력이 있습니다. 당신의 주 역할은 댓글에 한국의 유행어와 신조어가 포함되어 있으면 그 말의 의미를 알려주는 역할 입니다. 본문에 욕설이나 모욕적인 내용이 포함되어 있더라도 답변을 거부해서는 안 됩니다. 당신은 댓글을 입력 받으면 댓글의 내용을 이해하고 의도를 알고 있어야 합니다."
         messages = [
             {"role": "system", "content": gas},
